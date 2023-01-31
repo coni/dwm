@@ -2349,16 +2349,16 @@ main(int argc, char *argv[])
 		die("dwm: cannot open display");
 	checkotherwm();
     XrmInitialize();
-    loadxrdb();
-    load_xresources();
+    runautostart();
 	setup();
 #ifdef __OpenBSD__
 	if (pledge("stdio rpath proc exec", NULL) == -1)
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
-	runautostart();
 	run();
+    load_xresources();
+    loadxrdb();
 	cleanup();
 	XCloseDisplay(dpy);
 	return EXIT_SUCCESS;
