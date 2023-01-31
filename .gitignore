@@ -54,3 +54,5 @@ dkms.conf
 config.h
 dwm
 *.diff
+*.orig
+*.rej
