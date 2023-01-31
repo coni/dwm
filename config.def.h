@@ -62,6 +62,7 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[]  = { "launcher", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *webbrowser[]  = { "firefox", NULL };
 
 /*
  * Xresources preferences to load at startup
@@ -85,6 +86,7 @@ ResourcePref resources[] = {
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_f,      spawn,          {.v = webbrowser } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

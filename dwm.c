@@ -2261,6 +2261,7 @@ xerrorstart(Display *dpy, XErrorEvent *ee)
 void
 xrdb(const Arg *arg)
 {
+  load_xresources();
   loadxrdb();
   int i;
   for (i = 0; i < LENGTH(colors); i++)
