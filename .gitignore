@@ -56,3 +56,4 @@ dwm
 *.diff
 *.orig
 *.rej
+dwm-msg
